@@ -12,7 +12,7 @@ It shall use a docker with python:3.9-alpine
 * Use gitflow
   * <https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow>
 * Protect your master and develop branch
-  * <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pullrequests/managing-a-branch-protection-rule>
+  * <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule>
 * Use GitHub Actions feature branch
   * Build docker test stage
 * develop
