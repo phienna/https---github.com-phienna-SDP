@@ -8,12 +8,13 @@ It shall use a docker with python:3.9-alpine
 
 * Public repository
 * Use a project Kanban board to track your user stories
-Steps: Todo, In Progress, Done
+  * Steps: Todo, In Progress, Done
 * Use gitflow
-https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+  * <https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow>
 * Protect your master and develop branch
-https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pullrequests/managing-a-branch-protection-rule
-* Use GitHub Actions feature branch Build docker test stage
+  * <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pullrequests/managing-a-branch-protection-rule>
+* Use GitHub Actions feature branch
+  * Build docker test stage
 * develop
   * Build docker test stage
   * Build and push dev image to DockerHub (only on push)
@@ -23,39 +24,39 @@ https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-
 
 ### GitHub Actions Help
 
-* https://docs.docker.com/ci-cd/github-actions/
-* https://github.com/marketplace/actions/build-and-push-docker-images
+* <https://docs.docker.com/ci-cd/github-actions/>
+* <https://github.com/marketplace/actions/build-and-push-docker-images>
 
 ## Application Requirements
 
 * Flask application
-* Clean application layout 
-  * https://flask.palletsprojects.com/en/2.2.x/tutorial/layout/
-  * https://flask.palletsprojects.com/en/2.2.x/tutorial/factory/
-  * https://flask.palletsprojects.com/en/2.2.x/tutorial/views/
+* Clean application layout
+  * <https://flask.palletsprojects.com/en/2.2.x/tutorial/layout/>
+  * <https://flask.palletsprojects.com/en/2.2.x/tutorial/factory/>
+  * <https://flask.palletsprojects.com/en/2.2.x/tutorial/views/>
 * Separate requirements for each environment (test, dev and prod)
-https://riptutorial.com/django/example/8561/using-multiple-requirements-files
+<https://riptutorial.com/django/example/8561/using-multiple-requirements-files>
 * Sensor endpoints
   * /cpu/temp: Current CPU temperature in Celsius
   * /cpu/temp/error: Return "too hot" if the temperature is over 60 degree Celsius, else return "fine"
   * /disk/usage: Current disk usage in percent
 * Write unit and integration tests
-  * https://docs.pytest.org/en/latest/
-  * https://flask.palletsprojects.com/en/2.2.x/testing/
+  * <https://docs.pytest.org/en/latest/>
+  * <https://flask.palletsprojects.com/en/2.2.x/testing/>
   * Unit tests are marked as such
   * Integration test are marked as such
-    * https://docs.pytest.org/en/7.1.x/example/markers.html
-    * https://docs.pytest.org/en/7.1.x/how-to/mark.html
+    * <https://docs.pytest.org/en/7.1.x/example/markers.html>
+    * <https://docs.pytest.org/en/7.1.x/how-to/mark.html>
 * Mock external libraries for testing
-  * https://changhsinlee.com/pytest-mock/
-  * https://nedbatchelder.com/blog/201908/why_your_mock_doesnt_work.html
+  * <https://changhsinlee.com/pytest-mock/>
+  * <https://nedbatchelder.com/blog/201908/why_your_mock_doesnt_work.html>
 * At least 80% coverage
-https://coverage.readthedocs.io/en/6.4.2/
+  * <https://coverage.readthedocs.io/en/6.4.2/>
 
 ### Endpoint Help
 
-* https://gpiozero.readthedocs.io/en/stable/
-* https://pypi.org/project/RPi.GPIO/
+* <https://gpiozero.readthedocs.io/en/stable/>
+* <https://pypi.org/project/RPi.GPIO/>
 
 ### Mocking Help
 
@@ -73,17 +74,17 @@ def test_temp(mocker):
   * base
   includes everything that all targets need 
   * test
-    * run linter (https://flake8.pycqa.org/en/latest/)
+    * run linter (<https://flake8.pycqa.org/en/latest/>)
     * run tests (first unit tests, then integration tests)
-    `coverage run -m pytest [...]`
+      * `coverage run -m pytest [...]`
     * check coverage
-    `coverage report [...]`
+      * `coverage report [...]`
     * fails if test coverage is below 80%
   * development
-  will start Flask server in debug mode
-  `flask --debug run --host=0.0.0.0`
+    * will start Flask server in debug mode
+    * `flask --debug run --host=0.0.0.0`
   * production
-  will start Flask server without debug mode
+    * will start Flask server without debug mode
 
 ### Dockerfile RPi.GPIO Help
 
@@ -100,17 +101,17 @@ RUN apk add python3-dev \
 
 ### Dockerfile Help
 
-* https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/
-* https://docs.docker.com/language/java/run-tests/
-* https://docs.docker.com/language/java/configure-ci-cd/
+* <https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/>
+* <https://docs.docker.com/language/java/run-tests/>
+* <https://docs.docker.com/language/java/configure-ci-cd/>
 
 ## Documentation Requirements
 
 * PDF file
 * Team member names
 * Screenshots of the processes with descriptions
-* Time Tracking 
-how long did every process take to complete
+* Time Tracking
+  * how long did every process take to complete
 * Link to GitHub repository
 * Contents
   * User stories
